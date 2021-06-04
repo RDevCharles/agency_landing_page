@@ -1,0 +1,113 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+h3 {
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+}
+
+.App {
+  text-align: left;
+}
+
+
+
+
+.App-header {
+  background-color: #3f3f3f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.image_roll{
+ 
+  min-height: 100vh;
+  background-image: url("./components/assets/images/roll.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image_roll2{
+  min-height: 500px;
+  background-image: url("./components/assets/images/drink.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.centerAdjust{
+  display: 'flex';
+  flex-direction: 'row'; 
+  background-color:'#0f0f0f'; 
+}
+
+.phoneHeader{display: none;}
+
+@media screen and (max-width:600px) {
+  .phoneMinus{
+display: none;
+  }
+
+ 
+
+  .centerAdjust{
+ 
+   display:'flex';
+   justify-content:'center';
+    text-align: center;
+   
+    background-color:'#0f0f0f';
+  }
+
+  .centerMargin{
+justify-self: center;
+align-self: center;
+position: relative;
+left:18rem;
+  }
+
+ 
+
+}
+
+@media screen and (max-width:1060px) {
+
+  .phoneMinus{
+   display:none;
+      }
+
+      .regHeader{display: none;}
+      .phoneHeader{display: flex;}
+      .centerAdjust{
+ 
+        display:'flex';
+        justify-content:'center';
+         text-align: center;
+        
+         background-color:'#0f0f0f';
+       }
+     
+       .centerMargin{
+     justify-self: center;
+     align-self: center;
+     position: relative;
+     left:18rem;
+       }
+
+  
+
+}
