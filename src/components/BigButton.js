@@ -1,6 +1,9 @@
-const BigButton = () => {
+import React from 'react';
+const BigButton = (props) => {
+
+   
     return (
-        <button style={{width:'14rem',padding:'.5rem',color:'red',backgroundColor:'transparent', border: '10px solid'}}><h3>Join Tone</h3></button>
+        <button style={{ width: '14rem', padding: '.5rem', backgroundColor: 'transparent', color: `red`, border: '10px solid', margin: '1rem' }}><h3>{ props.title}</h3></button>
     )
 }
 

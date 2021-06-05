@@ -9,9 +9,10 @@ const Header = () => {
           <h1  class='centerMargin' style={{marginBottom:'4rem', color:'white'}}class="title is-1">Pok pok PBR&B quinoa 3 wolf moon iceland snackwave.</h1>
         <button style={{backgroundColor:'red', marginBottom:'4rem'}} class="button is-danger is-large">Join The Mailing List</button>
           </div>
-        <img className="phoneMinus" style={{width:'25rem'}} src={ HeroImg }/>
+        <img className="phoneMinus" style={{ width: '25rem' }} src={HeroImg} />
+        
       </div>
-
+     
       </>
 )
 }
