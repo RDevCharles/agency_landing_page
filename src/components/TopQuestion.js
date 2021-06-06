@@ -13,18 +13,24 @@ function TopQuestion() {
 
   const [displ, setDisplayed] = React.useState('none');
     const [displ2, setDisplayed2] = React.useState('none');
-    
-    const randomQuestions = [
-        { question1: 'Temperature check. How are you feeling today?', answer1: 'yes', answer2: 'no', answer3: 'Does Organized Chaos count?' },
-        { question1: 'Do you consider yourself organized?', answer1: 'Energized', answer2: 'Overwhelmed', answer3: "I'm Not Sure" },
-        {question1:'Before we get started... Would you hire yourself?', answer1:'yes', answer2:'no', answer3:'Does Organized Chaos count?'}]
+    const index = Math.floor((Math.random() * 3) + 1);
 
+
+ console.log(index)
+    const randomQuestions = [
+        { question1: '', answer1: '', answer2: '', answer3: '' },
+        { question1: 'Temperature check. How are you feeling today?', answer1: 'Energized', answer2: 'Overwhelmed', answer3: "I'm Not Sure" },
+        { question1: 'Do you consider yourself organized?', answer1: 'yes', answer2: 'no', answer3: "Does Organized Chaos count?" },
+        {question1:'Before we get started... Would you hire yourself?', answer1:'I am the boss', answer2:"I'm not sure"}]
+
+
+    
   return (
   
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column' }} className='image_roll'>
       
         <h1 data-aos="fade-up"
-          data-aos-duration="3000" class='centerMargin' style={{ marginBottom: '4rem', color: 'white' }} class="title is-1">{randomQuestions[0].question1}</h1>
+          data-aos-duration="3000" class='centerMargin' style={{ marginBottom: '4rem', color: 'white' }} class="title is-1">{randomQuestions[`${index}`].question1}</h1>
         
 
         {/*Info card to get customer info and start chat*/}
@@ -41,15 +47,22 @@ function TopQuestion() {
         <div data-aos="fade-up"
           data-aos-duration="3000" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}><div onClick={() => {
             setDisplayed('flex')
-          }}><BigButton title='I am the boss' /></div>
+          }}><BigButton title={randomQuestions[`${index}`].answer1} /></div>
           
           <div onClick={() => {
             setDisplayed2('flex')
-     }}><BigButton title="I'm not sure" /></div>
+     }}><BigButton title={randomQuestions[`${index}`].answer2} /></div>
+          {randomQuestions[`${index}`].answer3 ? (
+             <div onClick={() => {
+                setDisplayed2('flex')
+         }}><BigButton title={randomQuestions[`${index}`].answer3} /></div> 
+              ) : (null)
+              
+              
+              }
         
-        
-        </div>
-  
+          </div>
+     
        
 
           </div>
