@@ -10,6 +10,10 @@ h3 {
   font-weight: bold;
 }
 
+.btnImg {
+  cursor: pointer;;
+}
+
 .App {
   text-align: left;
 }

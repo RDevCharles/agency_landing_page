@@ -1,3 +1,3 @@
-finish service cards
+cant click big button more than once for state change
 add transitions for header buttons
 add live chat feature
