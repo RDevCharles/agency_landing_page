@@ -14,6 +14,9 @@ AOS.init();
 
 function App() {
 
+  let time = Date();
+  
+ 
   return (
     <div className="App">
       <TopNav />
@@ -33,6 +36,10 @@ function App() {
       </div>
      
       <Footer />
+
+      <div style={{display:'none'}} id='timeRefresh'>
+{time}
+      </div>
      
     </div>
   );
