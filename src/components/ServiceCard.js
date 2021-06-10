@@ -4,7 +4,7 @@ const ServiceCard = (props) => {
   const [see, setSee] = React.useState("none");
   const [seeMore, setSeeMore] = React.useState("flex");
   const [boxSize, setBoxSize] = React.useState("6rem");
-  
+
   return (
     <div
       style={{ width: "16rem", height: `${boxSize}`, margin: "2rem 1rem" }}
